@@ -43,8 +43,8 @@ from tkinter.filedialog import askdirectory
 from tkinter.filedialog import asksaveasfilename
 import tkinter.messagebox as messagebox
 from PIL import ImageTk, Image
-from lightning import Lightningfire-occurrence-predictor-repo
-from human import Humanfire-occurrence-predictor-repo
+from lightning import LightningFireOccurrencePrediction
+from human import HumanFireOccurrencePrediction
 import ctypes # To get the custom taskbar logo icon to show up
 import traceback # To get exception information from subprocesses
 import FOPConstantsAndFunctions
@@ -89,7 +89,7 @@ class StdoutRedirect(object):
 def runLightningFOPModel(config, date_to_predict_for, int_ltg_fire_holdover_lookback_time, float_ltg_fire_confidence_interval,
                          display_historical_fires_on_maps):
     try:
-        lightning_fop = Lightningfire-occurrence-predictor-repo(config.get('FilePathsAndLocations', r'ltg_input_raw_weather_data_file'),
+        lightning_fop =  LightningFireOccurrencePrediction(config.get('FilePathsAndLocations', r'ltg_input_raw_weather_data_file'),
                                                           config.get('FilePathsAndLocations', r'ltg_input_raw_lightning_strike_data_file'),
                                                           config.get('FilePathsAndLocations', r'ltg_intermediate_data_folder'),
                                                           config.get('FilePathsAndLocations', r'ltg_prediction_output_data_folder'),
@@ -108,7 +108,7 @@ def runLightningFOPModel(config, date_to_predict_for, int_ltg_fire_holdover_look
 
 def runHumanFOPModel(config, date_to_predict_for, float_hmn_fire_confidence_interval, display_historical_fires_on_maps):
     try:
-        human_fop = Humanfire-occurrence-predictor-repo(config.get('FilePathsAndLocations', r'ltg_input_raw_weather_data_file'),
+        human_fop =   HumanFireOccurrencePrediction(config.get('FilePathsAndLocations', r'ltg_input_raw_weather_data_file'),
                                                   config.get('FilePathsAndLocations', r'ltg_intermediate_data_folder'),
                                                   config.get('FilePathsAndLocations', r'ltg_prediction_output_data_folder'),
                                                   config.get('FilePathsAndLocations', r'ltg_prediction_output_maps_folder'), 
@@ -127,7 +127,7 @@ def runHumanFOPModel(config, date_to_predict_for, float_hmn_fire_confidence_inte
 def runGenerateLightningFireMapsPredictionsForDateRange(config, start_day, end_day, int_ltg_fire_holdover_lookback_time, float_ltg_fire_confidence_interval,
                                                         display_historical_fires_on_maps):
     try:
-        lightning_fop = Lightningfire-occurrence-predictor-repo(config.get('FilePathsAndLocations', r'ltg_input_raw_weather_data_file'),
+        lightning_fop =  LightningFireOccurrencePrediction(config.get('FilePathsAndLocations', r'ltg_input_raw_weather_data_file'),
                                                           config.get('FilePathsAndLocations', r'ltg_input_raw_lightning_strike_data_file'),
                                                           config.get('FilePathsAndLocations', r'ltg_intermediate_data_folder'),
                                                           config.get('FilePathsAndLocations', r'ltg_prediction_output_data_folder'),
@@ -147,7 +147,7 @@ def runGenerateLightningFireMapsPredictionsForDateRange(config, start_day, end_d
 
 def runGenerateLightningFireArrivalsCIDiagnosticGraph(config, start_day, end_day, int_ltg_fire_holdover_lookback_time, float_ltg_fire_confidence_interval):
     try:
-        lightning_fop = Lightningfire-occurrence-predictor-repo(config.get('FilePathsAndLocations', r'ltg_input_raw_weather_data_file'),
+        lightning_fop =  LightningFireOccurrencePrediction(config.get('FilePathsAndLocations', r'ltg_input_raw_weather_data_file'),
                                                           config.get('FilePathsAndLocations', r'ltg_input_raw_lightning_strike_data_file'),
                                                           config.get('FilePathsAndLocations', r'ltg_intermediate_data_folder'),
                                                           config.get('FilePathsAndLocations', r'ltg_prediction_output_data_folder'),
@@ -166,7 +166,7 @@ def runGenerateLightningFireArrivalsCIDiagnosticGraph(config, start_day, end_day
 
 def runGenerateHumanFireArrivalsCIDiagnosticGraph(config, dates_to_graph, float_hmn_fire_confidence_interval):
     try:
-        human_fop = Humanfire-occurrence-predictor-repo(config.get('FilePathsAndLocations', r'ltg_input_raw_weather_data_file'),
+        human_fop =   HumanFireOccurrencePrediction(config.get('FilePathsAndLocations', r'ltg_input_raw_weather_data_file'),
                                                   config.get('FilePathsAndLocations', r'ltg_intermediate_data_folder'),
                                                   config.get('FilePathsAndLocations', r'ltg_prediction_output_data_folder'),
                                                   config.get('FilePathsAndLocations', r'ltg_prediction_output_maps_folder'), 
@@ -183,7 +183,7 @@ def runGenerateHumanFireArrivalsCIDiagnosticGraph(config, dates_to_graph, float_
 def runGenerateHumanFireMapsPredictionsForDateRange(config, start_day, end_day, float_hmn_fire_confidence_interval,
                                                     display_historical_fires_on_maps):
     try:
-        human_fop = Humanfire-occurrence-predictor-repo(config.get('FilePathsAndLocations', r'ltg_input_raw_weather_data_file'),
+        human_fop =   HumanFireOccurrencePrediction(config.get('FilePathsAndLocations', r'ltg_input_raw_weather_data_file'),
                                                   config.get('FilePathsAndLocations', r'ltg_intermediate_data_folder'),
                                                   config.get('FilePathsAndLocations', r'ltg_prediction_output_data_folder'),
                                                   config.get('FilePathsAndLocations', r'ltg_prediction_output_maps_folder'), 
