@@ -32,10 +32,10 @@ int main(int argc, char *argv[])
   // use_cf2.exe "C:\\Users\\Ansell\\Desktop\\Mike\'s large LOP datasets\\alberta_data\\FWIgrid10-AB.dat" "C:\Users\Ansell\Desktop\Mike\'s large LOP datasets\\weather_interpolation\\"
   //
   // Sample gcc compile command for Lab PC:
-  // 'C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\gcc.exe' -g 'c:\Users\Ansell\Dropbox\University of Alberta\Software Development\FireOccurrencePrediction\lightning\weather\use_cf2.c' -o 'c:\Users\Ansell\Dropbox\University of Alberta\Software Development\FireOccurrencePrediction\lightning\weather\use_cf2.exe'
+  // 'C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\gcc.exe' -g 'c:\Users\Ansell\Dropbox\University of Alberta\Software Development\fire-occurrence-predictor-repo\lightning\weather\use_cf2.c' -o 'c:\Users\Ansell\Dropbox\University of Alberta\Software Development\fire-occurrence-predictor-repo\lightning\weather\use_cf2.exe'
   //
   // Sample gcc compile command for Home PC:
-  // 'C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\gcc.exe' -g 'Y:\University of Alberta\Software Development\FireOccurrencePrediction\lightning\weather\use_cf2.c' -o 'Y:\University of Alberta\Software Development\FireOccurrencePrediction\lightning\weather\use_cf2.exe'
+  // 'C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\gcc.exe' -g 'Y:\University of Alberta\Software Development\fire-occurrence-predictor-repo\lightning\weather\use_cf2.c' -o 'Y:\University of Alberta\Software Development\fire-occurrence-predictor-repo\lightning\weather\use_cf2.exe'
 
   if (argc != 4)
   {

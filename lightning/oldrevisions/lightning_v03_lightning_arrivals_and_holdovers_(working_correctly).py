@@ -451,8 +451,8 @@ def mainMethod():
     # Use strings for now.
     # 
     # HOME PC:
-    # input_path = 'Z:\LightningFireOccurrencePredictionInputs\AB-processing-forMATT-datasetALL.csv'
-    # output_path = 'Z:\LightningFireOccurrencePredictionInputs\ltg_output.csv' 
+    # input_path = 'Z:\Lightningfire-occurrence-predictor-repoInputs\AB-processing-forMATT-datasetALL.csv'
+    # output_path = 'Z:\Lightningfire-occurrence-predictor-repoInputs\ltg_output.csv' 
     # 
     # LAB PC:
     input_path = 'C:\Users\Ansell\Desktop\Mike\'s LOP dataset\AB-processing-forMATT-datasetALL_FIRST_500000_ROWS_PLUS_HEADER.csv'

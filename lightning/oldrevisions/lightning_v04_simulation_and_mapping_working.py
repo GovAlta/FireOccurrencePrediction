@@ -565,7 +565,7 @@ class LightningOccurrencePrediction(object):
             the processing flow. """
         
         print("lightningBinnerWrapper(): Calling lightning binner exe...")
-        # Sample command line arguments call: "Y:\\University of Alberta\\Software Development\\FireOccurrencePrediction\\lightning\\binning\\Gridlocations.prn", "Z:\\LightningFireOccurrencePredictionInputs\\ABltg_space_MATT.out", "Z:\\LightningFireOccurrencePredictionInputs\\ltg2010-20by20-five-period.dat")
+        # Sample command line arguments call: "Y:\\University of Alberta\\Software Development\\fire-occurrence-predictor-repo\\lightning\\binning\\Gridlocations.prn", "Z:\\Lightningfire-occurrence-predictor-repoInputs\\ABltg_space_MATT.out", "Z:\\Lightningfire-occurrence-predictor-repoInputs\\ltg2010-20by20-five-period.dat")
         subprocess.call([self.lightning_wrapper_exe_path, self.ltg_grid_locations_path, self.ltg_strike_raw_massaged_output_path, self.ltg_lightning_binned_output_path])
         print("lightningBinnerWrapper(): Lightning binner exe call completed.")
     
@@ -576,13 +576,13 @@ class LightningOccurrencePrediction(object):
             the processing flow. """
         
         print("weatherInterpolationWrapper(): Calling weather interpolation exe...")
-        # Sample command line arguments call: "Y:\\University of Alberta\\Software Development\\FireOccurrencePrediction\\lightning\\binning\\Gridlocations.prn", "Z:\\LightningFireOccurrencePredictionInputs\\ABltg_space_MATT.out", "Z:\\LightningFireOccurrencePredictionInputs\\ltg2010-20by20-five-period.dat")
+        # Sample command line arguments call: "Y:\\University of Alberta\\Software Development\\fire-occurrence-predictor-repo\\lightning\\binning\\Gridlocations.prn", "Z:\\Lightningfire-occurrence-predictor-repoInputs\\ABltg_space_MATT.out", "Z:\\Lightningfire-occurrence-predictor-repoInputs\\ltg2010-20by20-five-period.dat")
         subprocess.call([self.weather_interpolation_exe_path, self.ltg_weather_massaged_output_path, self.ltg_weather_interpolation_coefficients_path])
         print("weatherInterpolationWrapper(): Weather interpolation exe call completed.")
         raw_input("Press enter to continue. . .")
 
         print("weatherInterpolationWrapper(): Calling weather binner exe...")
-        # Sample command line arguments call: "Y:\\University of Alberta\\Software Development\\FireOccurrencePrediction\\lightning\\binning\\Gridlocations.prn", "Z:\\LightningFireOccurrencePredictionInputs\\ABltg_space_MATT.out", "Z:\\LightningFireOccurrencePredictionInputs\\ltg2010-20by20-five-period.dat")
+        # Sample command line arguments call: "Y:\\University of Alberta\\Software Development\\fire-occurrence-predictor-repo\\lightning\\binning\\Gridlocations.prn", "Z:\\Lightningfire-occurrence-predictor-repoInputs\\ABltg_space_MATT.out", "Z:\\Lightningfire-occurrence-predictor-repoInputs\\ltg2010-20by20-five-period.dat")
         subprocess.call([self.weather_binning_exe_path, self.ltg_weather_binned_output_path, self.ltg_grid_locations_path, self.ltg_weather_interpolation_coefficients_path])
         print("weatherInterpolationWrapper(): Weather binning exe call completed.")
     
@@ -600,7 +600,7 @@ class LightningOccurrencePrediction(object):
         random.seed(datetime.datetime.now())
         
         print("simulationWrapper(): Calling simulation exe...")
-        # Sample command line arguments call: simulate-new-allyears.exe 12345 "Z:\\LightningFireOccurrencePredictionInputs\\ltg_output.csv" "Z:\\LightningFireOccurrencePredictionInputs\\AB-predictions.out" "Z:\\LightningFireOccurrencePredictionInputs\\AB-grids.out"
+        # Sample command line arguments call: simulate-new-allyears.exe 12345 "Z:\\Lightningfire-occurrence-predictor-repoInputs\\ltg_output.csv" "Z:\\Lightningfire-occurrence-predictor-repoInputs\\AB-predictions.out" "Z:\\Lightningfire-occurrence-predictor-repoInputs\\AB-grids.out"
         subprocess.call([self.simulation_exe_path, str(random.randint(1, MAX_INT)), self.ltg_arrivals_holdovers_output_path, self.ltg_confidence_intervals_output_path, self.ltg_gridded_predictions_output_path])
         print("simulationWrapper(): simulation exe call completed.")    
 
@@ -1396,25 +1396,25 @@ def mainMethod():
     if working_from_home_today:
         
         # HOME PC:
-        ltg_arrivals_holdovers_input_path = 'Z:\LightningFireOccurrencePredictionInputs\AB-processing-forMATT-datasetALL-FIRST-136100-ROWS.csv'
-        ltg_arrivals_holdovers_output_path = 'Z:\LightningFireOccurrencePredictionInputs\ltg_probabilities_output.out'
-        #ltg_strike_raw_input_path = 'Y:\University of Alberta\Software Development\FireOccurrencePrediction\lightning\misc\ltg2017b.csv'
-        ltg_strike_raw_input_path = 'Z:\LightningFireOccurrencePredictionInputs\Lightning_0301_1031_2018.txt'
-        ltg_strike_raw_massaged_output_path = 'Z:\LightningFireOccurrencePredictionInputs\ABltg_space_MATT.out'
-        ltg_grid_locations_path = 'Y:\\University of Alberta\\Software Development\\FireOccurrencePrediction\\lightning\\binning\\Gridlocations.prn'
-        ltg_lightning_binned_output_path = 'Z:\\LightningFireOccurrencePredictionInputs\\ltg-10by10-five-period_MATT.dat'
-        ltg_raw_weather_input_path = 'Z:\LightningFireOccurrencePredictionInputs\Alberta_PM_Weather_2018.csv'
-        ltg_weather_massaged_output_path = 'Z:\LightningFireOccurrencePredictionInputs\Alberta_PM_Weather_2018_MASSAGED.csv'
-        ltg_weather_binned_output_path = 'Z:\LightningFireOccurrencePredictionInputs\FWIgrid10-AB.dat'            
-        ltg_weather_interpolation_coefficients_path = 'Z:\LightningFireOccurrencePredictionInputs\\'
-        ltg_weather_station_locations_path = 'Z:\LightningFireOccurrencePredictionInputs\Alberta_Weather_Stations_Active_Inactive_2019_MATT.csv'
-        ltg_fishnet_nsr_path = 'Y:\\University of Alberta\\Software Development\\FireOccurrencePrediction\\lightning\\misc\\alberta_static.csv'
-        ltg_merged_weather_lightning_data_path = 'Z:\LightningFireOccurrencePredictionInputs\Alberta_Merged_Weather_Lightning_MATT.csv'
-        ltg_confidence_intervals_output_path = "Z:\\LightningFireOccurrencePredictionInputs\\AB-predictions.out"
-        ltg_gridded_predictions_output_path = "Z:\\LightningFireOccurrencePredictionInputs\\AB-grids.out"
-        ltg_alberta_shapefile = 'Y:\\University of Alberta\\Software Development\\FireOccurrencePrediction\\shapefiles\\asrd_mgmt_area\\BF_ASRD_MGMT_AREA_POLYGON.shp'
-        ltg_actual_2018_fires = 'Z:\\LightningFireOccurrencePredictionInputs\\ABltgfires-2018.csv'
-        ltg_maps_output_folder = 'Z:\\LightningFireOccurrencePredictionInputs\\output_maps\\'
+        ltg_arrivals_holdovers_input_path = 'Z:\Lightningfire-occurrence-predictor-repoInputs\AB-processing-forMATT-datasetALL-FIRST-136100-ROWS.csv'
+        ltg_arrivals_holdovers_output_path = 'Z:\Lightningfire-occurrence-predictor-repoInputs\ltg_probabilities_output.out'
+        #ltg_strike_raw_input_path = 'Y:\University of Alberta\Software Development\fire-occurrence-predictor-repo\lightning\misc\ltg2017b.csv'
+        ltg_strike_raw_input_path = 'Z:\Lightningfire-occurrence-predictor-repoInputs\Lightning_0301_1031_2018.txt'
+        ltg_strike_raw_massaged_output_path = 'Z:\Lightningfire-occurrence-predictor-repoInputs\ABltg_space_MATT.out'
+        ltg_grid_locations_path = 'Y:\\University of Alberta\\Software Development\\fire-occurrence-predictor-repo\\lightning\\binning\\Gridlocations.prn'
+        ltg_lightning_binned_output_path = 'Z:\\Lightningfire-occurrence-predictor-repoInputs\\ltg-10by10-five-period_MATT.dat'
+        ltg_raw_weather_input_path = 'Z:\Lightningfire-occurrence-predictor-repoInputs\Alberta_PM_Weather_2018.csv'
+        ltg_weather_massaged_output_path = 'Z:\Lightningfire-occurrence-predictor-repoInputs\Alberta_PM_Weather_2018_MASSAGED.csv'
+        ltg_weather_binned_output_path = 'Z:\Lightningfire-occurrence-predictor-repoInputs\FWIgrid10-AB.dat'            
+        ltg_weather_interpolation_coefficients_path = 'Z:\Lightningfire-occurrence-predictor-repoInputs\\'
+        ltg_weather_station_locations_path = 'Z:\Lightningfire-occurrence-predictor-repoInputs\Alberta_Weather_Stations_Active_Inactive_2019_MATT.csv'
+        ltg_fishnet_nsr_path = 'Y:\\University of Alberta\\Software Development\\fire-occurrence-predictor-repo\\lightning\\misc\\alberta_static.csv'
+        ltg_merged_weather_lightning_data_path = 'Z:\Lightningfire-occurrence-predictor-repoInputs\Alberta_Merged_Weather_Lightning_MATT.csv'
+        ltg_confidence_intervals_output_path = "Z:\\Lightningfire-occurrence-predictor-repoInputs\\AB-predictions.out"
+        ltg_gridded_predictions_output_path = "Z:\\Lightningfire-occurrence-predictor-repoInputs\\AB-grids.out"
+        ltg_alberta_shapefile = 'Y:\\University of Alberta\\Software Development\\fire-occurrence-predictor-repo\\shapefiles\\asrd_mgmt_area\\BF_ASRD_MGMT_AREA_POLYGON.shp'
+        ltg_actual_2018_fires = 'Z:\\Lightningfire-occurrence-predictor-repoInputs\\ABltgfires-2018.csv'
+        ltg_maps_output_folder = 'Z:\\Lightningfire-occurrence-predictor-repoInputs\\output_maps\\'
     else:
 
         # LAB PC:
@@ -1431,11 +1431,11 @@ def mainMethod():
         ltg_weather_binned_output_path = 'C:\Users\Ansell\Desktop\Mike\'s large LOP datasets\\weather_interpolation\FWIgrid10-AB.dat'
         ltg_weather_interpolation_coefficients_path = 'C:\Users\Ansell\Desktop\Mike\'s large LOP datasets\\weather_interpolation\\'
         ltg_weather_station_locations_path = 'C:\Users\Ansell\Desktop\Mike\'s large LOP datasets\\alberta_data\\Alberta_Weather_Stations_Active_Inactive_2019_MATT.csv'
-        ltg_fishnet_nsr_path = 'C:\Users\Ansell\Dropbox\University of Alberta\Software Development\FireOccurrencePrediction\lightning\misc\\alberta_static.csv'
+        ltg_fishnet_nsr_path = 'C:\Users\Ansell\Dropbox\University of Alberta\Software Development\fire-occurrence-predictor-repo\lightning\misc\\alberta_static.csv'
         ltg_merged_weather_lightning_data_path = 'C:\Users\Ansell\Desktop\Mike\'s large LOP datasets\\alberta_data\\Alberta_Merged_Weather_Lightning_MATT.csv'
         ltg_confidence_intervals_output_path = "C:\Users\Ansell\Desktop\Mike\'s large LOP datasets\\AB-predictions_2018_new_1000_simulations.out"
         ltg_gridded_predictions_output_path = "C:\Users\Ansell\Desktop\Mike\'s large LOP datasets\\AB-grids_2018_new.out"
-        ltg_alberta_shapefile = 'C:\\Users\\Ansell\\Dropbox\\University of Alberta\\Software Development\\FireOccurrencePrediction\\shapefiles\\asrd_mgmt_area\\BF_ASRD_MGMT_AREA_POLYGON.shp'
+        ltg_alberta_shapefile = 'C:\\Users\\Ansell\\Dropbox\\University of Alberta\\Software Development\\fire-occurrence-predictor-repo\\shapefiles\\asrd_mgmt_area\\BF_ASRD_MGMT_AREA_POLYGON.shp'
         ltg_actual_2018_fires = 'C:\Users\Ansell\Desktop\Mike\'s large LOP datasets\\alberta_data\\ABltgfires-2018.csv'
         ltg_maps_output_folder = 'C:\Users\Ansell\Desktop\Mike\'s large LOP datasets\\output_maps\\'
 
