@@ -45,7 +45,7 @@ int main(int argc, char *argv[]){
   // argv[3] is the output path to (and including) ltg2010-20by20-five-period.dat
   //
   // Sample command line usage for Home PC:
-  // build-ltggrids-five-period.exe "Y:\\University of Alberta\\Software Development\\FireOccurrencePrediction\\lightning\\binning\\Gridlocations.prn" "Z:\\LightningFireOccurrencePredictionInputs\\ABltg_space_MATT.out" "Z:\\LightningFireOccurrencePredictionInputs\\ltg2010-20by20-five-period.dat"
+  // build-ltggrids-five-period.exe "Y:\\University of Alberta\\Software Development\\fire-occurrence-predictor-repo\\lightning\\binning\\Gridlocations.prn" "Z:\\Lightningfire-occurrence-predictor-repoInputs\\ABltg_space_MATT.out" "Z:\\Lightningfire-occurrence-predictor-repoInputs\\ltg2010-20by20-five-period.dat"
   printf("Number of command line args is %d", argc);
 
   // MATT: Rudimentary command line argument check.

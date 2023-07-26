@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
   // cf-build-AB.exe "C:\\Users\\Ansell\\Desktop\\Mike\'s large LOP datasets\\alberta_data\\Alberta_PM_Weather_2018_MASSAGED.csv" "C:\Users\Ansell\Desktop\Mike\'s large LOP datasets\\weather_interpolation\\"
   //
   // Sample gcc compile command:
-  // 'C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\gcc.exe' -g 'c:\Users\Ansell\Dropbox\University of Alberta\Software Development\FireOccurrencePrediction\lightning\weather\cf-build-AB.c' -o 'c:\Users\Ansell\Dropbox\University of Alberta\Software Development\FireOccurrencePrediction\lightning\weather\cf-build-AB.exe'
+  // 'C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\gcc.exe' -g 'c:\Users\Ansell\Dropbox\University of Alberta\Software Development\fire-occurrence-predictor-repo\lightning\weather\cf-build-AB.c' -o 'c:\Users\Ansell\Dropbox\University of Alberta\Software Development\fire-occurrence-predictor-repo\lightning\weather\cf-build-AB.exe'
 
   if (argc != 3)
   {

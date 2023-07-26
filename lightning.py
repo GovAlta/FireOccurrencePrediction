@@ -31,7 +31,7 @@ import pandas.io.common
 
 ######################################### CLASSES #########################################
 
-class LightningFireOccurrencePrediction(object):
+class Lightningfire-occurrence-predictor-repo(object):
     """ This class contains the logic for the Lightning Fire Occurrence Prediction model itself. """
 
     def __init__(self,
@@ -85,39 +85,39 @@ class LightningFireOccurrencePrediction(object):
 
         # Probability of arrivals and holdovers data file path (to be put in the resources data folder).
         self.ltg_arrivals_holdovers_probabilities_output_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\ltg_fop_probabilities_output.out'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\ltg_fop_probabilities_output.out'))
 
         # Grid locations file path.
         self.ltg_grid_locations_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\Gridlocations.prn'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\Gridlocations.prn'))
         
         # Weather station locations file path.
         self.ltg_weather_station_locations_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\Alberta_Weather_Stations_2019_new.csv'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\Alberta_Weather_Stations_2019_new.csv'))
         
         # Fishnet NSR file path.
         self.ltg_fishnet_nsr_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\alberta_static.csv'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\alberta_static.csv'))
         
         # Alberta basemap shapefile path.
         self.ltg_alberta_shapefile = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\shapefiles\\asrd_mgmt_area\\BF_ASRD_MGMT_AREA_POLYGON.shp'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\shapefiles\\asrd_mgmt_area\\BF_ASRD_MGMT_AREA_POLYGON.shp'))
         
         # Alberta fishnet shapefile path.
         self.ltg_alberta_fishnet_shapefile = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\fishnet.shp'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\shapefiles\\fishnet\\fishnet.shp'))
         
         # Alberta polygon shapefile path.
         self.ltg_alberta_poly_shapefile = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\AB_Poly.shp'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\shapefiles\\fishnet\\AB_Poly.shp'))
 
         # Alberta forest area shapefile path.
         self.ltg_alberta_forest_area_shapefile = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\Forest_Area.shp'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\shapefiles\\fishnet\\Forest_Area.shp'))
         
         # FOP system state DB / CSV file path.
         self.fop_system_state_db_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\fop_system_state_db.csv'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\fop_system_state_db.csv'))
         
         # Maps output folder path.
         self.ltg_output_maps_folder = ltg_output_maps_folder
@@ -129,19 +129,19 @@ class LightningFireOccurrencePrediction(object):
 
         # Build the path to the C binning executable.
         self.lightning_wrapper_exe_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\lightning\\binning\\build-ltggrids-five-period.exe'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\lightning\\binning\\build-ltggrids-five-period.exe'))
         
         # Build the path to the C weather interpolation executable.
         self.weather_interpolation_exe_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\lightning\\weather\\cf-build-AB.exe'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\lightning\\weather\\cf-build-AB.exe'))
         
         # Build the path to the C weather binning executable.
         self.weather_binning_exe_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\lightning\\weather\\use_cf2.exe'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\lightning\\weather\\use_cf2.exe'))
 
         # Build the path to the C simulation executable.
         self.simulation_exe_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\lightning\\simulation\\simulate-new-allyears-DC.exe'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\lightning\\simulation\\simulate-new-allyears-DC.exe'))
     
     def lightningFirePredictionMapper(self, map_type, days_to_map, display_historical_fires_on_maps, ltg_fire_holdover_lookback_time, ltg_fire_confidence_interval):
         """ This method produces a map of lightning fire predictions overlayed on an Alberta
@@ -663,7 +663,7 @@ class LightningFireOccurrencePrediction(object):
             the processing flow. """
         
         print("lightningBinnerWrapper(): Calling lightning binner exe...")
-        # Sample command line arguments call: "Y:\\University of Alberta\\Software Development\\FireOccurrencePrediction\\lightning\\binning\\Gridlocations.prn", "Z:\\LightningFireOccurrencePredictionInputs\\ABltg_space_MATT.out", "Z:\\LightningFireOccurrencePredictionInputs\\ltg2010-20by20-five-period.dat")
+        # Sample command line arguments call: "Y:\\University of Alberta\\Software Development\\fire-occurrence-predictor-repo\\lightning\\binning\\Gridlocations.prn", "Z:\\Lightningfire-occurrence-predictor-repoInputs\\ABltg_space_MATT.out", "Z:\\Lightningfire-occurrence-predictor-repoInputs\\ltg2010-20by20-five-period.dat")
         subprocess.call([self.lightning_wrapper_exe_path, self.ltg_grid_locations_path, self.ltg_strike_raw_massaged_output_path, self.ltg_lightning_binned_output_path])
         print("lightningBinnerWrapper(): Lightning binner exe call completed.")
     
@@ -698,7 +698,7 @@ class LightningFireOccurrencePrediction(object):
         random.seed(datetime.datetime.now())
         
         print("simulationWrapper(): Calling simulation exe for a start day of %s, an end date of %s, a lightning fire holdover lookback time of %d, and a confidence interval of %.1f..." % (str(start_day), str(end_day), ltg_fire_holdover_lookback_time, ltg_fire_confidence_interval))
-        # Sample command line arguments call: simulate-new-allyears.exe 12345 "Z:\\LightningFireOccurrencePredictionInputs\\ltg_output.csv" "Z:\\LightningFireOccurrencePredictionInputs\\AB-predictions.out" "Z:\\LightningFireOccurrencePredictionInputs\\AB-grids.out" 121 125
+        # Sample command line arguments call: simulate-new-allyears.exe 12345 "Z:\\Lightningfire-occurrence-predictor-repoInputs\\ltg_output.csv" "Z:\\Lightningfire-occurrence-predictor-repoInputs\\AB-predictions.out" "Z:\\Lightningfire-occurrence-predictor-repoInputs\\AB-grids.out" 121 125
         subprocess.call([self.simulation_exe_path,
                          str(random.randint(1, FOPConstantsAndFunctions.MAX_INT)),
                          self.ltg_arrivals_holdovers_probabilities_output_path,

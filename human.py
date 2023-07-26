@@ -23,11 +23,10 @@ import pylab
 import matplotlib.dates as mdates
 import FOPConstantsAndFunctions
 import time  # Time delay for debugging purposes.
-from lightning import LightningFireOccurrencePrediction  # Re-use the rawWeatherDataMassager method.
+from lightning import Lightningfire-occurrence-predictor-repo  # Re-use the rawWeatherDataMassager method.
 import random
 #from matplotlib.dates import MO, TU, WE, TH, FR, SA, SU
 import numpy as np
-from osgeo import ogr
 
 # Numerical constants.
 NO_VALID_DATA_VALUE = -1.0
@@ -36,7 +35,7 @@ NUM_SIMULATION_REPLICATIONS = 1000
 # Other constants.
 USE_SLOPES_MODEL_V2 = True
 
-class HumanFireOccurrencePrediction(object):
+class Humanfire-occurrence-predictor-repo(object):
     """ This class contains the logic for the Human Fire Occurrence Prediction model itself. """
 
     def __init__(self,
@@ -71,77 +70,77 @@ class HumanFireOccurrencePrediction(object):
 
         # Calgary region.
         self.hmn_coefficients_path_calgary = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\calgary'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\human\\calgary'))
        
         self.hmn_coefficients_path_calgary_all_variables = self.hmn_coefficients_path_calgary + '\\GRID_Calgary_AllVariables.csv'
         self.hmn_coefficients_path_calgary_all_terms = self.hmn_coefficients_path_calgary + '\\Calgary_AllTerms.xlsx'
 
         # Edson region.
         self.hmn_coefficients_path_edson = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\edson'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\human\\edson'))
        
         self.hmn_coefficients_path_edson_all_variables = self.hmn_coefficients_path_edson + '\\GRID_Edson_AllVariables.csv'
         self.hmn_coefficients_path_edson_all_terms = self.hmn_coefficients_path_edson + '\\Edson_AllTerms.xlsx'
 
         # Fort McMurray region.
         self.hmn_coefficients_path_fort_mcmurray = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\fort_mcmurray'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\human\\fort_mcmurray'))
        
         self.hmn_coefficients_path_fort_mcmurray_all_variables = self.hmn_coefficients_path_fort_mcmurray + '\\GRID_FortMcMurray_AllVariables.csv'
         self.hmn_coefficients_path_fort_mcmurray_all_terms = self.hmn_coefficients_path_fort_mcmurray + '\\FortMcMurray_AllTerms.xlsx'
 
         # Grande Prairie region.
         self.hmn_coefficients_path_grande_prairie = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\grande_prairie'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\human\\grande_prairie'))
        
         self.hmn_coefficients_path_grande_prairie_all_variables = self.hmn_coefficients_path_grande_prairie + '\\GRID_GrandePrairie_AllVariables.csv'
         self.hmn_coefficients_path_grande_prairie_all_terms = self.hmn_coefficients_path_grande_prairie + '\\GrandePrairie_AllTerms.xlsx'
 
         # High Level region.
         self.hmn_coefficients_path_high_level = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\high_level'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\human\\high_level'))
        
         self.hmn_coefficients_path_high_level_all_variables = self.hmn_coefficients_path_high_level + '\\GRID_HighLevel_AllVariables.csv'
         self.hmn_coefficients_path_high_level_all_terms = self.hmn_coefficients_path_high_level + '\\HighLevel_AllTerms.xlsx'
 
         # Lac la Biche region.
         self.hmn_coefficients_path_lac_la_biche = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\lac_la_biche'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\human\\lac_la_biche'))
        
         self.hmn_coefficients_path_lac_la_biche_all_variables = self.hmn_coefficients_path_lac_la_biche + '\\GRID_LacLaBiche_AllVariables.csv'
         self.hmn_coefficients_path_lac_la_biche_all_terms = self.hmn_coefficients_path_lac_la_biche + '\\LacLaBiche_AllTerms.xlsx'
 
         # Peace River region.
         self.hmn_coefficients_path_peace_river = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\peace_river'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\human\\peace_river'))
        
         self.hmn_coefficients_path_peace_river_all_variables = self.hmn_coefficients_path_peace_river + '\\GRID_PeaceRiver_AllVariables.csv'
         self.hmn_coefficients_path_peace_river_all_terms = self.hmn_coefficients_path_peace_river + '\\PeaceRiver_AllTerms.xlsx'
 
         # Rocky Mountain House region.
         self.hmn_coefficients_path_rocky_mountain_house = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\rocky_mountain_house'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\human\\rocky_mountain_house'))
        
         self.hmn_coefficients_path_rocky_mountain_house_all_variables = self.hmn_coefficients_path_rocky_mountain_house + '\\GRID_RockyMountainHouse_AllVariables.csv'
         self.hmn_coefficients_path_rocky_mountain_house_all_terms = self.hmn_coefficients_path_rocky_mountain_house + '\\RockyMountainHouse_AllTerms.xlsx'
 
         # Slave Lake region.
         self.hmn_coefficients_path_slave_lake = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\slave_lake'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\human\\slave_lake'))
        
         self.hmn_coefficients_path_slave_lake_all_variables = self.hmn_coefficients_path_slave_lake + '\\GRID_SlaveLake_AllVariables.csv'
         self.hmn_coefficients_path_slave_lake_all_terms = self.hmn_coefficients_path_slave_lake + '\\SlaveLake_AllTerms.xlsx'
 
         # Whitecourt region.
         self.hmn_coefficients_path_whitecourt = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\whitecourt'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\human\\whitecourt'))
        
         self.hmn_coefficients_path_whitecourt_all_variables = self.hmn_coefficients_path_whitecourt + '\\GRID_Whitecourt_AllVariables.csv'
         self.hmn_coefficients_path_whitecourt_all_terms = self.hmn_coefficients_path_whitecourt + '\\Whitecourt_AllTerms.xlsx'
 
         # Slopes region.
         self.hmn_coefficients_path_slopes = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\slopes'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\human\\slopes'))
        
         self.hmn_coefficients_path_slopes_all_variables = self.hmn_coefficients_path_slopes + '\\GRID_Slopes_AllVariables.csv'
         self.hmn_coefficients_path_slopes_all_terms = self.hmn_coefficients_path_slopes + '\\Slopes_AllTerms.xlsx'
@@ -150,39 +149,39 @@ class HumanFireOccurrencePrediction(object):
 
         # Human FOP cumulative expected values and probabilities data file path.
         self.hmn_cumulative_probs_expvals_output_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\hmn_fop_probabilities_output.out'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\hmn_fop_probabilities_output.out'))
         
         # Weather station locations file path.
         self.hmn_weather_station_locations_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\Alberta_Weather_Stations_2019_new.csv'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\Alberta_Weather_Stations_2019_new.csv'))
         
         # Grid locations file path.
         self.hmn_grid_locations_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\Gridlocations.prn'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\Gridlocations.prn'))
         
         # Fishnet NSR file path.
         self.hmn_fishnet_nsr_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\alberta_static.csv'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\alberta_static.csv'))
 
         # Alberta basemap shapefile path.
         self.hmn_alberta_basemap_shapefile = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\shapefiles\\asrd_mgmt_area\\BF_ASRD_MGMT_AREA_POLYGON.shp'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\shapefiles\\asrd_mgmt_area\\BF_ASRD_MGMT_AREA_POLYGON.shp'))
         
         # Alberta fishnet shapefile path.
         self.hmn_alberta_fishnet_shapefile = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\fishnet.shp'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\shapefiles\\fishnet\\fishnet.shp'))
         
         # Alberta polygon shapefile path.
         self.hmn_alberta_poly_shapefile = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\AB_Poly.shp'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\shapefiles\\fishnet\\AB_Poly.shp'))
 
         # Alberta forest area shapefile path.
         self.hmn_alberta_forest_area_shapefile = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\Forest_Area.shp'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\shapefiles\\fishnet\\Forest_Area.shp'))
         
         # FOP system state DB / CSV file path.
         self.fop_system_state_db_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\fop_system_state_db.csv'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\resource_files\\fop_system_state_db.csv'))
         
         # Maps output folder path.
         self.hmn_output_maps_folder = hmn_output_maps_folder
@@ -194,11 +193,11 @@ class HumanFireOccurrencePrediction(object):
 
         # Build the path to the C weather interpolation executable.
         self.weather_interpolation_exe_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\lightning\\weather\\cf-build-AB.exe'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\lightning\\weather\\cf-build-AB.exe'))
         
         # Build the path to the C weather binning executable.
         self.weather_binning_exe_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\lightning\\weather\\use_cf2.exe'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fire-occurrence-predictor-repo\\lightning\\weather\\use_cf2.exe'))
     
     def weatherInterpolationBinnerWrapper(self):
         """ Calls the wrapped weather interpolation and binning tools, feeding it the massaged weather data.
@@ -768,7 +767,7 @@ class HumanFireOccurrencePrediction(object):
             hmn_confidence_intervals_output_df = hmn_confidence_intervals_output_df.append(row_data_df) 
             
             # Output the intermediate CI calculation df to disk for debugging purposes.
-            # intermediate_sim_df.to_csv('Z:/LightningFireOccurrencePredictionInputs/phase_two/intermediate_data_files/hmn_intermediate_sim_df.csv', index=False)   
+            # intermediate_sim_df.to_csv('Z:/Lightningfire-occurrence-predictor-repoInputs/phase_two/intermediate_data_files/hmn_intermediate_sim_df.csv', index=False)   
 
         # We are done the simulation! Output the dataframe to disk.
         hmn_confidence_intervals_output_df.to_csv(self.hmn_confidence_intervals_output_path, sep=' ', index=False, header=False)
