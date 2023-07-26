@@ -432,8 +432,8 @@ def mainMethod():
 
     # Will likely switch these paths to command-line parameters, or a config.ini file, later.
     # Use strings for now.
-    input_path_home_pc = 'Z:\Lightningfire-occurrence-predictor-repoInputs\AB-processing-forMATT-datasetALL.csv'
-    output_path_home_pc = 'Z:\Lightningfire-occurrence-predictor-repoInputs\ltg_output.csv'
+    input_path_home_pc = 'Z:\ LightningFireOccurrencePredictionInputs\AB-processing-forMATT-datasetALL.csv'
+    output_path_home_pc = 'Z:\ LightningFireOccurrencePredictionInputs\ltg_output.csv'
 
     obj = LightningOccurrencePrediction(input_path_home_pc, output_path_home_pc)
     obj.processLightningArrivalsIgnitions()

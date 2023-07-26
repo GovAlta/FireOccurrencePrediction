@@ -31,7 +31,7 @@ import pandas.io.common
 
 ######################################### CLASSES #########################################
 
-class Lightningfire-occurrence-predictor-repo(object):
+class LightningFireOccurrencePrediction(object):
     """ This class contains the logic for the Lightning Fire Occurrence Prediction model itself. """
 
     def __init__(self,
@@ -663,7 +663,7 @@ class Lightningfire-occurrence-predictor-repo(object):
             the processing flow. """
         
         print("lightningBinnerWrapper(): Calling lightning binner exe...")
-        # Sample command line arguments call: "Y:\\University of Alberta\\Software Development\\fire-occurrence-predictor-repo\\lightning\\binning\\Gridlocations.prn", "Z:\\Lightningfire-occurrence-predictor-repoInputs\\ABltg_space_MATT.out", "Z:\\Lightningfire-occurrence-predictor-repoInputs\\ltg2010-20by20-five-period.dat")
+        # Sample command line arguments call: "Y:\\University of Alberta\\Software Development\\fire-occurrence-predictor-repo\\lightning\\binning\\Gridlocations.prn", "Z:\\ LightningFireOccurrencePredictionInputs\\ABltg_space_MATT.out", "Z:\\ LightningFireOccurrencePredictionInputs\\ltg2010-20by20-five-period.dat")
         subprocess.call([self.lightning_wrapper_exe_path, self.ltg_grid_locations_path, self.ltg_strike_raw_massaged_output_path, self.ltg_lightning_binned_output_path])
         print("lightningBinnerWrapper(): Lightning binner exe call completed.")
     
@@ -698,7 +698,7 @@ class Lightningfire-occurrence-predictor-repo(object):
         random.seed(datetime.datetime.now())
         
         print("simulationWrapper(): Calling simulation exe for a start day of %s, an end date of %s, a lightning fire holdover lookback time of %d, and a confidence interval of %.1f..." % (str(start_day), str(end_day), ltg_fire_holdover_lookback_time, ltg_fire_confidence_interval))
-        # Sample command line arguments call: simulate-new-allyears.exe 12345 "Z:\\Lightningfire-occurrence-predictor-repoInputs\\ltg_output.csv" "Z:\\Lightningfire-occurrence-predictor-repoInputs\\AB-predictions.out" "Z:\\Lightningfire-occurrence-predictor-repoInputs\\AB-grids.out" 121 125
+        # Sample command line arguments call: simulate-new-allyears.exe 12345 "Z:\\ LightningFireOccurrencePredictionInputs\\ltg_output.csv" "Z:\\ LightningFireOccurrencePredictionInputs\\AB-predictions.out" "Z:\\ LightningFireOccurrencePredictionInputs\\AB-grids.out" 121 125
         subprocess.call([self.simulation_exe_path,
                          str(random.randint(1, FOPConstantsAndFunctions.MAX_INT)),
                          self.ltg_arrivals_holdovers_probabilities_output_path,

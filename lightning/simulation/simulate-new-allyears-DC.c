@@ -62,7 +62,7 @@ int main(int argc ,char *argv[]){
   // argv[8] is a float representing the confidence interval to be used.
   //
   // Sample command line usage for Home PC:
-  // simulate-new-allyears-DC.exe 12345 "Z:\\Lightningfire-occurrence-predictor-repoInputs\\ltg_output.csv" "Z:\\Lightningfire-occurrence-predictor-repoInputs\\AB-predictions.out" "Z:\\Lightningfire-occurrence-predictor-repoInputs\\AB-grids.out" 121 125
+  // simulate-new-allyears-DC.exe 12345 "Z:\\ LightningFireOccurrencePredictionInputs\\ltg_output.csv" "Z:\\ LightningFireOccurrencePredictionInputs\\AB-predictions.out" "Z:\\ LightningFireOccurrencePredictionInputs\\AB-grids.out" 121 125
   //
   // Sample gcc compile command for Home PC:
   // 'C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\gcc.exe' -g 'Y:\University of Alberta\Software Development\fire-occurrence-predictor-repo\lightning\simulation\simulate-new-allyears-DC.c' -lm -o 'Y:\University of Alberta\Software Development\fire-occurrence-predictor-repo\lightning\simulation\simulate-new-allyears-DC.exe'

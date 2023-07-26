@@ -23,7 +23,7 @@ import pylab
 import matplotlib.dates as mdates
 import FOPConstantsAndFunctions
 import time  # Time delay for debugging purposes.
-from lightning import Lightningfire-occurrence-predictor-repo  # Re-use the rawWeatherDataMassager method.
+from lightning import  LightningFireOccurrencePrediction  # Re-use the rawWeatherDataMassager method.
 import random
 #from matplotlib.dates import MO, TU, WE, TH, FR, SA, SU
 import numpy as np
@@ -35,7 +35,7 @@ NUM_SIMULATION_REPLICATIONS = 1000
 # Other constants.
 USE_SLOPES_MODEL_V2 = True
 
-class Humanfire-occurrence-predictor-repo(object):
+class   HumanFireOccurrencePrediction(object):
     """ This class contains the logic for the Human Fire Occurrence Prediction model itself. """
 
     def __init__(self,
@@ -767,7 +767,7 @@ class Humanfire-occurrence-predictor-repo(object):
             hmn_confidence_intervals_output_df = hmn_confidence_intervals_output_df.append(row_data_df) 
             
             # Output the intermediate CI calculation df to disk for debugging purposes.
-            # intermediate_sim_df.to_csv('Z:/Lightningfire-occurrence-predictor-repoInputs/phase_two/intermediate_data_files/hmn_intermediate_sim_df.csv', index=False)   
+            # intermediate_sim_df.to_csv('Z:/ LightningFireOccurrencePredictionInputs/phase_two/intermediate_data_files/hmn_intermediate_sim_df.csv', index=False)   
 
         # We are done the simulation! Output the dataframe to disk.
         hmn_confidence_intervals_output_df.to_csv(self.hmn_confidence_intervals_output_path, sep=' ', index=False, header=False)
