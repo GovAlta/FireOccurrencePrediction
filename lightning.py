@@ -1692,7 +1692,6 @@ class LightningFireOccurrencePrediction(object):
                 raw_weather_data_df['weather_date'] = pd.to_datetime(raw_weather_data_df['weather_date'], format='%m/%d/%y %H:%M', infer_datetime_format=True)
 
             elif list(raw_weather_data_df.columns) == FOPConstantsAndFunctions.RAW_WEATHER_CSV_HEADERS_2:
-                
                 # Raw weather headers type 2.
                 print("lightningFOPController(): Raw weather data column check OK, headers type 2.")
                 print("lightningFOPController(): Making headers lower-case...")
