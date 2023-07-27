@@ -34,7 +34,7 @@ RAW_WEATHER_CSV_HEADERS = ['id', 'ws_id', 'c_sky_cndt_id', 'c_wthr_typ_id', 'c_w
                                'cuplus_cloud_amt', 'cb_cloud_amt', 'grand_total', 'fine_fuel_moisture_code',
                                'initial_spread_index', 'duff_moisture_code', 'build_up_index', 'drought_code',
                                'daily_severity_rating', 'fire_weather_index', 'present_weather', 'weather_remarks',
-                               'station_id', 'c_wnd_drct_type', 'c_sky_cndt_type', 'name']
+                               'station_id', 'c_wnd_drct_type', 'c_sky_cndt_type', 'name','precipitation']
 
 RAW_WEATHER_CSV_HEADERS_2 = ['WEATHER_DATE', 'STATION_ID', 'LATITUDE', 'LONGITUDE', 'STATION_TYPE', 'FORECAST_REGION',
                                  'DRY_BULB_TEMPERATURE', 'RELATIVE_HUMIDITY', 'WIND_SPEED_KMH', 'WIND_DIRECTION', 'PRECIPITATION',
