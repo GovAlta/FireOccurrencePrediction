@@ -55,7 +55,11 @@ class   HumanFireOccurrencePrediction(object):
         self.hmn_weather_massaged_output_path = hmn_intermediate_data_folder + '\\2_Massaged_Weather.csv'
     
         # 3. Weather interpolation coefficients data file path (to be put in the intermediate data folder).
-        self.hmn_weather_interpolation_coefficients_path = hmn_intermediate_data_folder + '\\3_weather_interpolation_coefficients'
+        self.hmn_weather_interpolation_coefficients_path = os.path.join(hmn_intermediate_data_folder, '3_weather_interpolation_coefficients')
+
+        # Create the folder if it doesn't exist
+        if not os.path.exists(self.hmn_weather_interpolation_coefficients_path):
+            os.makedirs(self.hmn_weather_interpolation_coefficients_path)
 
         # 4. Binned weather data file (to be put in the intermediate data folder).
         self.hmn_weather_binned_output_path = hmn_intermediate_data_folder + '\\4_Binned_Weather.csv'
@@ -213,8 +217,11 @@ class   HumanFireOccurrencePrediction(object):
 
         print("weatherInterpolationBinnerWrapper(): Calling weather binner exe...")
         subprocess.call([self.weather_binning_exe_path, self.hmn_weather_binned_output_path, self.hmn_grid_locations_path, self.hmn_weather_interpolation_coefficients_path])
+
+
         print("weatherInterpolationBinnerWrapper(): Weather binning exe call completed.")
-    
+        
+        
     def humanFOPProbabilitiesCalculator(self, date_to_predict_for):
         """ This method computes Human FOP expected values and probabilities per Alberta fishnet cell. """
 

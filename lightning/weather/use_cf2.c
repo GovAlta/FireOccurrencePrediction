@@ -87,6 +87,7 @@ int main(int argc, char *argv[])
       for(i=0;i<10;i++)for(j=0;j<10010;j++)codes[j][i]=-999.9;
       for(i=0;i<10;i++){   /* go thru each index */
         err=fscanf(inp[i],"%4d%2d%2d%3d%6f%6f%7f%7f%7f%7f",
+
               &yr,&mon,&day,&NUM,&min,&max,&latmin,&latmax,&longmin,&longmax);
         for(k=0;k<600;k++)err=fscanf(inp[i],"%8lf%8lf%14lf",
                 &interp[k][0],&interp[k][1],&interp[k][2]);
@@ -95,19 +96,21 @@ int main(int argc, char *argv[])
           lat=ERlocation[j][0];
           lon=ERlocation[j][1];
           if(NUM>0)
-               codes[j][i]=calculate(interp,NUM,lat,lon,min,max);
+            codes[j][i]=calculate(interp,NUM,lat,lon,min,max);
         }  /* then the loop thur the ER locations  */
       } /* end the i=1->10 loop */
       if (err > 0)
       {
         printf("%d  %d %d\n",yr,mon,day);
+
       }
       for(j=0;j<REGIONS;j++){
-          if(codes[j][1]>-900.0 && err>0){   /* its not a missing value ****  YEAR exclusion*/
+        if(codes[j][1]<-900.0 && err>0){   /* its not a missing value ****  YEAR exclusion*/
 //comma seperated
-             fprintf(out,"%d,%d,%d,%d",ecoregion[j],yr,mon,day);
-             for(i=0;i<10;i++)fprintf(out,",%0.1f",codes[j][i]);
-             fprintf(out,"\n");
+          printf("LINE 114 IMPORTANT IF STATEMENT!!!!");
+          fprintf(out,"%d,%d,%d,%d",ecoregion[j],yr,mon,day);
+          for(i=0;i<10;i++)fprintf(out,",%0.1f",codes[j][i]);
+          fprintf(out,"\n");
 // space seperated
 /*
              fprintf(out,"%6d %4d %2d %2d ",ecoregion[j],yr,mon,day);
