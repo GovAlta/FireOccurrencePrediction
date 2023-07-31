@@ -1000,7 +1000,7 @@ class LightningFireOccurrencePrediction(object):
             if working_dict['NSR'] == '':
                 processed = processed - 1  # Decrement i because this row will not get processed.
                 continue  # Skip the current row and go on to the next one.
-            
+            print(working_dict['ffmc'])
             if float(working_dict['ffmc']) < 0:
                 working_dict['ffmc'] = ''
             
