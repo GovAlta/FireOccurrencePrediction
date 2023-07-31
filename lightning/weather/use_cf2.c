@@ -107,7 +107,6 @@ int main(int argc, char *argv[])
       for(j=0;j<REGIONS;j++){
         if(codes[j][1]<-900.0 && err>0){   /* its not a missing value ****  YEAR exclusion*/
 //comma seperated
-          printf("LINE 114 IMPORTANT IF STATEMENT!!!!");
           fprintf(out,"%d,%d,%d,%d",ecoregion[j],yr,mon,day);
           for(i=0;i<10;i++)fprintf(out,",%0.1f",codes[j][i]);
           fprintf(out,"\n");
