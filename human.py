@@ -27,7 +27,6 @@ from lightning import LightningFireOccurrencePrediction  # Re-use the rawWeather
 import random
 #from matplotlib.dates import MO, TU, WE, TH, FR, SA, SU
 import numpy as np
-from osgeo import ogr
 
 # Numerical constants.
 NO_VALID_DATA_VALUE = -1.0
