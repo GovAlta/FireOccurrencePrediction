@@ -92,8 +92,7 @@ class LightningFireOccurrencePrediction(object):
             os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\Gridlocations.prn'))
         
         # Weather station locations file path.
-        self.ltg_weather_station_locations_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\Alberta_Weather_Stations_2019_new.csv'))
+        self.hmn_weather_station_locations_path = 'FireOccurrencePrediction\\resource_files\\Alberta_Weather_Stations_2019_new.csv'
         
         # Fishnet NSR file path.
         self.ltg_fishnet_nsr_path = \
@@ -116,8 +115,7 @@ class LightningFireOccurrencePrediction(object):
             os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\Forest_Area.shp'))
         
         # FOP system state DB / CSV file path.
-        self.fop_system_state_db_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\fop_system_state_db.csv'))
+        self.fop_system_state_db_path = 'FireOccurrencePrediction\\resource_files\\fop_system_state_db.csv'
         
         # Maps output folder path.
         self.ltg_output_maps_folder = ltg_output_maps_folder
