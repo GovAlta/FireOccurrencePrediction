@@ -54,9 +54,9 @@ import FOPConstantsAndFunctions
 APPLICATION_STATE_FILE = os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\config.ini'))
 ALBERTA_LOGO_FILE = os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\alberta_wildfire_black_logo_prototype_scaled.png'))
 ALBERTA_ICON_FILE = os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\alberta_wildfire_icon.ico'))
-FOP_SYSTEM_STATE_DB_PATH = os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\fop_system_state_db.csv'))
+FOP_SYSTEM_STATE_DB_PATH = 'FireOccurrencePrediction\\resource_files\\fop_system_state_db.csv'
 LTG_CUMULATIVE_PROBS_PATH = os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\ltg_fop_probabilities_output.out'))
-HMN_CUMULATIVE_PROBS_EXPVALS_PATH = os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\hmn_fop_probabilities_output.out'))
+HMN_CUMULATIVE_PROBS_EXPVALS_PATH = 'FireOccurrencePrediction\\resource_files\\hmn_fop_probabilities_output.out'
 
 ##########################################  CLASSES  ##########################################
 

@@ -148,12 +148,10 @@ class HumanFireOccurrencePrediction(object):
         # Construct paths to other important files and folders needed by the Human FOP model:
 
         # Human FOP cumulative expected values and probabilities data file path.
-        self.hmn_cumulative_probs_expvals_output_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\hmn_fop_probabilities_output.out'))
+        self.hmn_cumulative_probs_expvals_output_path =  'FireOccurrencePrediction\\resource_files\\hmn_fop_probabilities_output.out'
         
         # Weather station locations file path.
-        self.hmn_weather_station_locations_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\Alberta_Weather_Stations_2019_new.csv'))
+        self.hmn_weather_station_locations_path = 'FireOccurrencePrediction\\resource_files\\Alberta_Weather_Stations_2019_new.csv'
         
         # Grid locations file path.
         self.hmn_grid_locations_path = \
@@ -180,9 +178,7 @@ class HumanFireOccurrencePrediction(object):
             os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\Forest_Area.shp'))
         
         # FOP system state DB / CSV file path.
-        self.fop_system_state_db_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\fop_system_state_db.csv'))
-        
+        self.fop_system_state_db_path = 'FireOccurrencePrediction\\resource_files\\fop_system_state_db.csv'
         # Maps output folder path.
         self.hmn_output_maps_folder = hmn_output_maps_folder
 

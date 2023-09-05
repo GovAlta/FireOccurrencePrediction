@@ -1,1 +1,0 @@
-# fire-occurrence-predictor-repo
