@@ -900,7 +900,7 @@ class HumanFireOccurrencePrediction(object):
                     geo_df_gridded_predictions[(geo_df_gridded_predictions['probability'] >= 0.0) & (geo_df_gridded_predictions['probability'] <= 0.003)].plot(ax=ax, markersize=9, color='blue', marker='s', label='Low')
                     geo_df_gridded_predictions[(geo_df_gridded_predictions['probability'] < 0)].plot(ax=ax, markersize=9, color='black', marker='o', label='No data')
 
-                
+
                 # Add information related to confidence intervals here (with some logic to display either a whole number or float, as appropriate):
                 ci_string = '\n'.join((r'Predictions with %s%% confidence' % (str(int(hmn_fire_confidence_interval) if hmn_fire_confidence_interval.is_integer() else hmn_fire_confidence_interval)),
                                         r'Alberta: %d to %d fires' % (confidence_intervals_df_view['totarrPROV_ci_low'],
