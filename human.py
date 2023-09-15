@@ -70,77 +70,77 @@ class HumanFireOccurrencePrediction(object):
 
         # Calgary region.
         self.hmn_coefficients_path_calgary = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\calgary'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\human\\calgary'))
        
         self.hmn_coefficients_path_calgary_all_variables = self.hmn_coefficients_path_calgary + '\\GRID_Calgary_AllVariables.csv'
         self.hmn_coefficients_path_calgary_all_terms = self.hmn_coefficients_path_calgary + '\\Calgary_AllTerms.xlsx'
 
         # Edson region.
         self.hmn_coefficients_path_edson = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\edson'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\human\\edson'))
        
         self.hmn_coefficients_path_edson_all_variables = self.hmn_coefficients_path_edson + '\\GRID_Edson_AllVariables.csv'
         self.hmn_coefficients_path_edson_all_terms = self.hmn_coefficients_path_edson + '\\Edson_AllTerms.xlsx'
 
         # Fort McMurray region.
         self.hmn_coefficients_path_fort_mcmurray = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\fort_mcmurray'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\human\\fort_mcmurray'))
        
         self.hmn_coefficients_path_fort_mcmurray_all_variables = self.hmn_coefficients_path_fort_mcmurray + '\\GRID_FortMcMurray_AllVariables.csv'
         self.hmn_coefficients_path_fort_mcmurray_all_terms = self.hmn_coefficients_path_fort_mcmurray + '\\FortMcMurray_AllTerms.xlsx'
 
         # Grande Prairie region.
         self.hmn_coefficients_path_grande_prairie = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\grande_prairie'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\human\\grande_prairie'))
        
         self.hmn_coefficients_path_grande_prairie_all_variables = self.hmn_coefficients_path_grande_prairie + '\\GRID_GrandePrairie_AllVariables.csv'
         self.hmn_coefficients_path_grande_prairie_all_terms = self.hmn_coefficients_path_grande_prairie + '\\GrandePrairie_AllTerms.xlsx'
 
         # High Level region.
         self.hmn_coefficients_path_high_level = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\high_level'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\human\\high_level'))
        
         self.hmn_coefficients_path_high_level_all_variables = self.hmn_coefficients_path_high_level + '\\GRID_HighLevel_AllVariables.csv'
         self.hmn_coefficients_path_high_level_all_terms = self.hmn_coefficients_path_high_level + '\\HighLevel_AllTerms.xlsx'
 
         # Lac la Biche region.
         self.hmn_coefficients_path_lac_la_biche = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\lac_la_biche'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\human\\lac_la_biche'))
        
         self.hmn_coefficients_path_lac_la_biche_all_variables = self.hmn_coefficients_path_lac_la_biche + '\\GRID_LacLaBiche_AllVariables.csv'
         self.hmn_coefficients_path_lac_la_biche_all_terms = self.hmn_coefficients_path_lac_la_biche + '\\LacLaBiche_AllTerms.xlsx'
 
         # Peace River region.
         self.hmn_coefficients_path_peace_river = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\peace_river'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\human\\peace_river'))
        
         self.hmn_coefficients_path_peace_river_all_variables = self.hmn_coefficients_path_peace_river + '\\GRID_PeaceRiver_AllVariables.csv'
         self.hmn_coefficients_path_peace_river_all_terms = self.hmn_coefficients_path_peace_river + '\\PeaceRiver_AllTerms.xlsx'
 
         # Rocky Mountain House region.
         self.hmn_coefficients_path_rocky_mountain_house = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\rocky_mountain_house'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\human\\rocky_mountain_house'))
        
         self.hmn_coefficients_path_rocky_mountain_house_all_variables = self.hmn_coefficients_path_rocky_mountain_house + '\\GRID_RockyMountainHouse_AllVariables.csv'
         self.hmn_coefficients_path_rocky_mountain_house_all_terms = self.hmn_coefficients_path_rocky_mountain_house + '\\RockyMountainHouse_AllTerms.xlsx'
 
         # Slave Lake region.
         self.hmn_coefficients_path_slave_lake = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\slave_lake'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\human\\slave_lake'))
        
         self.hmn_coefficients_path_slave_lake_all_variables = self.hmn_coefficients_path_slave_lake + '\\GRID_SlaveLake_AllVariables.csv'
         self.hmn_coefficients_path_slave_lake_all_terms = self.hmn_coefficients_path_slave_lake + '\\SlaveLake_AllTerms.xlsx'
 
         # Whitecourt region.
         self.hmn_coefficients_path_whitecourt = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\whitecourt'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\human\\whitecourt'))
        
         self.hmn_coefficients_path_whitecourt_all_variables = self.hmn_coefficients_path_whitecourt + '\\GRID_Whitecourt_AllVariables.csv'
         self.hmn_coefficients_path_whitecourt_all_terms = self.hmn_coefficients_path_whitecourt + '\\Whitecourt_AllTerms.xlsx'
 
         # Slopes region.
         self.hmn_coefficients_path_slopes = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\human\\slopes'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\human\\slopes'))
        
         self.hmn_coefficients_path_slopes_all_variables = self.hmn_coefficients_path_slopes + '\\GRID_Slopes_AllVariables.csv'
         self.hmn_coefficients_path_slopes_all_terms = self.hmn_coefficients_path_slopes + '\\Slopes_AllTerms.xlsx'
@@ -155,27 +155,26 @@ class HumanFireOccurrencePrediction(object):
         
         # Grid locations file path.
         self.hmn_grid_locations_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\Gridlocations.prn'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\Gridlocations.prn'))
         
         # Fishnet NSR file path.
         self.hmn_fishnet_nsr_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\alberta_static.csv'))
-
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\alberta_static.csv'))
         # Alberta basemap shapefile path.
         self.hmn_alberta_basemap_shapefile = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\shapefiles\\asrd_mgmt_area\\BF_ASRD_MGMT_AREA_POLYGON.shp'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\shapefiles\\asrd_mgmt_area\\BF_ASRD_MGMT_AREA_POLYGON.shp'))
         
         # Alberta fishnet shapefile path.
         self.hmn_alberta_fishnet_shapefile = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\fishnet.shp'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\fishnet.shp'))
         
         # Alberta polygon shapefile path.
         self.hmn_alberta_poly_shapefile = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\AB_Poly.shp'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\AB_Poly.shp'))
 
         # Alberta forest area shapefile path.
         self.hmn_alberta_forest_area_shapefile = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\Forest_Area.shp'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\Forest_Area.shp'))
         
         # FOP system state DB / CSV file path.
         self.fop_system_state_db_path = 'FireOccurrencePrediction\\resource_files\\fop_system_state_db.csv'
@@ -189,7 +188,7 @@ class HumanFireOccurrencePrediction(object):
 
         # Build the path to the C weather interpolation executable.
         self.weather_interpolation_exe_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\lightning\\weather\\cf-build-AB.exe'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\lightning\\weather\\cf-build-AB.exe'))
         
         # Build the path to the C weather binning executable.
         self.weather_binning_exe_path = \
@@ -240,7 +239,7 @@ class HumanFireOccurrencePrediction(object):
             # Load up the Slopes region terms and variables file if we are to use the new version of the Slopes model.
             if USE_SLOPES_MODEL_V2:
                 print("humanFOPProbabilitiesCalculator(): Using Slopes v2 model coefficients . . .")
-                slopes_all_terms_df = pd.read_excel(self.hmn_coefficients_path_slopes_all_terms, sheet_name=None, index_col=0)
+                slopes_all_terms_df = pd.read_excel(self.hmn_coefficients_path_slopes_all_terms, sheet_name=None, index_col=0, engine='openpyxl')
                 slopes_all_variables_df = pd.read_csv(self.hmn_coefficients_path_slopes_all_variables, sep=',')
 
             i = 0
@@ -389,61 +388,61 @@ class HumanFireOccurrencePrediction(object):
         
         # Calgary forest region.
         print("humanFOPProbabilitiesCalculator(): Computing Human FOP probabilities for the Calgary forest region. . .")
-        calgary_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_calgary_all_terms, sheet_name=None, index_col=0)
+        calgary_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_calgary_all_terms, sheet_name=None, index_col=0, engine='openpyxl')
         calgary_all_variables_df = pd.read_csv(self.hmn_coefficients_path_calgary_all_variables, sep=',')
         do_calculate_probabilities(calgary_all_terms_dfs, calgary_all_variables_df)
 
         # Edson forest region.
         print("humanFOPProbabilitiesCalculator(): Computing Human FOP probabilities for the Edson forest region. . .")
-        edson_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_edson_all_terms, sheet_name=None, index_col=0)
+        edson_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_edson_all_terms, sheet_name=None, index_col=0, engine='openpyxl')
         edson_all_variables_df = pd.read_csv(self.hmn_coefficients_path_edson_all_variables, sep=',')
         do_calculate_probabilities(edson_all_terms_dfs, edson_all_variables_df)
 
         # Fort McMurray forest region.
         print("humanFOPProbabilitiesCalculator(): Computing Human FOP probabilities for the Fort McMurray forest region. . .")
-        fort_mcmurray_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_fort_mcmurray_all_terms, sheet_name=None, index_col=0)
+        fort_mcmurray_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_fort_mcmurray_all_terms, sheet_name=None, index_col=0, engine='openpyxl')
         fort_mcmurray_all_variables_df = pd.read_csv(self.hmn_coefficients_path_fort_mcmurray_all_variables, sep=',')
         do_calculate_probabilities(fort_mcmurray_all_terms_dfs, fort_mcmurray_all_variables_df)
 
         # Grande Prairie forest region.
         print("humanFOPProbabilitiesCalculator(): Computing Human FOP probabilities for the Grande Prairie forest region. . .")
-        grande_prairie_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_grande_prairie_all_terms, sheet_name=None, index_col=0)
+        grande_prairie_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_grande_prairie_all_terms, sheet_name=None, index_col=0, engine='openpyxl')
         grande_prairie_all_variables_df = pd.read_csv(self.hmn_coefficients_path_grande_prairie_all_variables, sep=',')
         do_calculate_probabilities(grande_prairie_all_terms_dfs, grande_prairie_all_variables_df)
 
         # High Level forest region.
         print("humanFOPProbabilitiesCalculator(): Computing Human FOP probabilities for the High Level forest region. . .")
-        high_level_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_high_level_all_terms, sheet_name=None, index_col=0)
+        high_level_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_high_level_all_terms, sheet_name=None, index_col=0, engine='openpyxl')
         high_level_all_variables_df = pd.read_csv(self.hmn_coefficients_path_high_level_all_variables, sep=',')
         do_calculate_probabilities(high_level_all_terms_dfs, high_level_all_variables_df)
 
         # Lac la Biche forest region.
         print("humanFOPProbabilitiesCalculator(): Computing Human FOP probabilities for the Lac la Biche forest region. . .")
-        lac_la_biche_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_lac_la_biche_all_terms, sheet_name=None, index_col=0)
+        lac_la_biche_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_lac_la_biche_all_terms, sheet_name=None, index_col=0, engine='openpyxl')
         lac_la_biche_all_variables_df = pd.read_csv(self.hmn_coefficients_path_lac_la_biche_all_variables, sep=',')
         do_calculate_probabilities(lac_la_biche_all_terms_dfs, lac_la_biche_all_variables_df)
 
         # Peace River forest region.
         print("humanFOPProbabilitiesCalculator(): Computing Human FOP probabilities for the Peace River forest region. . .")
-        peace_river_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_peace_river_all_terms, sheet_name=None, index_col=0)
+        peace_river_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_peace_river_all_terms, sheet_name=None, index_col=0, engine='openpyxl')
         peace_river_all_variables_df = pd.read_csv(self.hmn_coefficients_path_peace_river_all_variables, sep=',')
         do_calculate_probabilities(peace_river_all_terms_dfs, peace_river_all_variables_df)
 
         # Rocky Mountain House forest region.
         print("humanFOPProbabilitiesCalculator(): Computing Human FOP probabilities for the Rocky Mountain House forest region. . .")
-        rocky_mountain_house_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_rocky_mountain_house_all_terms, sheet_name=None, index_col=0)
+        rocky_mountain_house_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_rocky_mountain_house_all_terms, sheet_name=None, index_col=0, engine='openpyxl')
         rocky_mountain_house_all_variables_df = pd.read_csv(self.hmn_coefficients_path_rocky_mountain_house_all_variables, sep=',')
         do_calculate_probabilities(rocky_mountain_house_all_terms_dfs, rocky_mountain_house_all_variables_df)
 
         # Slave Lake forest region.
         print("humanFOPProbabilitiesCalculator(): Computing Human FOP probabilities for the Slave Lake forest region. . .")
-        slave_lake_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_slave_lake_all_terms, sheet_name=None, index_col=0)
+        slave_lake_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_slave_lake_all_terms, sheet_name=None, index_col=0, engine='openpyxl')
         slave_lake_all_variables_df = pd.read_csv(self.hmn_coefficients_path_slave_lake_all_variables, sep=',')
         do_calculate_probabilities(slave_lake_all_terms_dfs, slave_lake_all_variables_df)
 
         # Whitecourt forest region.
         print("humanFOPProbabilitiesCalculator(): Computing Human FOP probabilities for the Whitecourt forest region. . .")
-        whitecourt_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_whitecourt_all_terms, sheet_name=None, index_col=0)
+        whitecourt_all_terms_dfs = pd.read_excel(self.hmn_coefficients_path_whitecourt_all_terms, sheet_name=None, index_col=0, engine='openpyxl')
         whitecourt_all_variables_df = pd.read_csv(self.hmn_coefficients_path_whitecourt_all_variables, sep=',')
         do_calculate_probabilities(whitecourt_all_terms_dfs, whitecourt_all_variables_df)
         

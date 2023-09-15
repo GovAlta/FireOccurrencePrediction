@@ -85,34 +85,34 @@ class LightningFireOccurrencePrediction(object):
 
         # Probability of arrivals and holdovers data file path (to be put in the resources data folder).
         self.ltg_arrivals_holdovers_probabilities_output_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\ltg_fop_probabilities_output.out'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\ltg_fop_probabilities_output.out'))
 
         # Grid locations file path.
         self.ltg_grid_locations_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\Gridlocations.prn'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\Gridlocations.prn'))
         
         # Weather station locations file path.
         self.hmn_weather_station_locations_path = 'FireOccurrencePrediction\\resource_files\\Alberta_Weather_Stations_2019_new.csv'
         
         # Fishnet NSR file path.
         self.ltg_fishnet_nsr_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\alberta_static.csv'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\alberta_static.csv'))
         
         # Alberta basemap shapefile path.
         self.ltg_alberta_shapefile = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\shapefiles\\asrd_mgmt_area\\BF_ASRD_MGMT_AREA_POLYGON.shp'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\shapefiles\\asrd_mgmt_area\\BF_ASRD_MGMT_AREA_POLYGON.shp'))
         
         # Alberta fishnet shapefile path.
         self.ltg_alberta_fishnet_shapefile = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\fishnet.shp'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\fishnet.shp'))
         
         # Alberta polygon shapefile path.
         self.ltg_alberta_poly_shapefile = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\AB_Poly.shp'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\AB_Poly.shp'))
 
         # Alberta forest area shapefile path.
         self.ltg_alberta_forest_area_shapefile = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\Forest_Area.shp'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\shapefiles\\fishnet\\Forest_Area.shp'))
         
         # FOP system state DB / CSV file path.
         self.fop_system_state_db_path = 'FireOccurrencePrediction\\resource_files\\fop_system_state_db.csv'
@@ -127,19 +127,19 @@ class LightningFireOccurrencePrediction(object):
 
         # Build the path to the C binning executable.
         self.lightning_wrapper_exe_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\lightning\\binning\\build-ltggrids-five-period.exe'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\lightning\\binning\\build-ltggrids-five-period.exe'))
         
         # Build the path to the C weather interpolation executable.
         self.weather_interpolation_exe_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\lightning\\weather\\cf-build-AB.exe'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\lightning\\weather\\cf-build-AB.exe'))
         
         # Build the path to the C weather binning executable.
         self.weather_binning_exe_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\lightning\\weather\\use_cf2.exe'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\lightning\\weather\\use_cf2.exe'))
 
         # Build the path to the C simulation executable.
         self.simulation_exe_path = \
-            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\lightning\\simulation\\simulate-new-allyears-DC.exe'))
+            os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'FireOccurrencePrediction\\FireOccurrencePrediction\\lightning\\simulation\\simulate-new-allyears-DC.exe'))
     
     def lightningFirePredictionMapper(self, map_type, days_to_map, display_historical_fires_on_maps, ltg_fire_holdover_lookback_time, ltg_fire_confidence_interval):
         """ This method produces a map of lightning fire predictions overlayed on an Alberta
