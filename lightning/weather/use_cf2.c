@@ -36,15 +36,14 @@ int main(int argc, char *argv[])
   //
   // Sample gcc compile command for Home PC:
   // 'C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\gcc.exe' -g 'Y:\University of Alberta\Software Development\FireOccurrencePrediction\lightning\weather\use_cf2.c' -o 'Y:\University of Alberta\Software Development\FireOccurrencePrediction\lightning\weather\use_cf2.exe'
-  printf("HEEEERREEEEE 1!!!!");
+
   if (argc != 4)
   {
-    printf("HEEEERREEEEE 3!!!!");
     printf("Invalid number of command line arguments provided.\r\n");
     printf("Usage: use_cf2.exe [...\\FWIgrid10-AB.dat] [...\\Gridlocations_plus.prn] [...DIRECTORY_TO_STORE_INTERMEDIATE_FILES_IN]\r\n");
     return 1;
   }
-  printf("HEEEERREEEEE 2!!!!");
+
   // MATT: Change the current working directory to the input path of the coefficient files.
   chdir(argv[3]);
 
@@ -67,13 +66,12 @@ int main(int argc, char *argv[])
    inp[9] = fopen("CF-fwi.ab", "r");
 
    out=fopen(argv[1],"w");  // FWIgrid10-AB.dat
-   points=fopen("C:\\Users\\alyse.ridge\\FireOccurrencePrediction\\FireOccurrencePrediction\\resource_files\\Gridlocations.prn","r"); // Gridlocations_plus.prn
+   points=fopen(argv[2],"r"); // Gridlocations_plus.prn
    if(points==NULL)printf("Points file not found\n");
 
    err=fscanf(points,"%d%f%f",&ecoregion[0],&ERlocation[0][0],&ERlocation[0][1]);
    REGIONS=0;
    while(err>=0){
-    printf("HEEEERREEEEE 4!!!!");
        printf("%5d == lat= %0.2f  lon= %0.2f\n",
            REGIONS,ERlocation[REGIONS][0],ERlocation[REGIONS][1]);
        REGIONS++;
@@ -85,24 +83,18 @@ int main(int argc, char *argv[])
    printf("done --%d grids\n",REGIONS);
 
    err=1;
-   printf("HEEEERREEEEE 5!!!!");
    while(err>=0){   /* go thru one day at a time */
-    printf("HEEEERREEEEE 6!!!!");
       for(i=0;i<10;i++)for(j=0;j<10010;j++)codes[j][i]=-999.9;
       for(i=0;i<10;i++){   /* go thru each index */
         err=fscanf(inp[i],"%4d%2d%2d%3d%6f%6f%7f%7f%7f%7f",
               &yr,&mon,&day,&NUM,&min,&max,&latmin,&latmax,&longmin,&longmax);
-              printf("NUM = %d",NUM);
-              printf("Year = %d",yr);
         for(k=0;k<600;k++)err=fscanf(inp[i],"%8lf%8lf%14lf",
                 &interp[k][0],&interp[k][1],&interp[k][2]);
        /* now go thru all points and fill in matrix*/
         if(yr>1900)for(j=0;j<REGIONS;j++){  /* ************* YEAR exclusion */
-          printf("HEEEERREEEEE 8!!!!");
           lat=ERlocation[j][0];
           lon=ERlocation[j][1];
           if(NUM>0)
-            printf("HEEEERREEEEE 7!!!!");
                codes[j][i]=calculate(interp,NUM,lat,lon,min,max);
         }  /* then the loop thur the ER locations  */
       } /* end the i=1->10 loop */
@@ -150,4 +142,3 @@ float calculate(alldata cf, int NUM, float lat,float lon, float min,float max)
  if(calc<min) calc=min;
  return (float)(calc);
 }
-
