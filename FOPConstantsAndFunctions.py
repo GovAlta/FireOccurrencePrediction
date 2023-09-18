@@ -149,8 +149,8 @@ def rawWeatherDataMassager(input_df, output_path, weather_station_locations_path
         input_df['wind_speed_kmh'] = input_df['wind_speed_kmh'].apply(lambda x : -999.9 if isnan(x) else x)
 
         print("FOPConstantsAndFunctions().rawWeatherDataMassager(): Massaging raw weather data - rain_mm...")
-        input_df['rain_mm'] = 5
-        input_df['rain_mm'] = 5
+        input_df['rain_mm']  =input_df['rain_mm'].apply(lambda x : round(x, 1))
+        input_df['rain_mm'] = input_df['rain_mm'].apply(lambda x : -999.9 if isnan(x) else x)
 
         print("FOPConstantsAndFunctions().rawWeatherDataMassager(): Massaging raw weather data - fine_fuel_moisture_code...")
         input_df['fine_fuel_moisture_code'] = input_df['fine_fuel_moisture_code'].apply(lambda x : round(x, 1))

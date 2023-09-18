@@ -1434,7 +1434,7 @@ class LightningFireOccurrencePrediction(object):
                                                                     ((actual_fires_df['REPORTED_DATE']).dt.day == date.day)]
             reported_fires_dict[date.strftime("%Y-%m-%d")] = len(actual_reported_date_fires_df_view.index)
             
-
+            actual_fires_df['FIRE_START_DATE'] = pd.to_datetime(actual_fires_df['FIRE_START_DATE'], errors='coerce')
             actual_start_date_fires_df_view = actual_fires_df.loc[((actual_fires_df['FIRE_START_DATE']).dt.year == date.year) &
                                                                 ((actual_fires_df['FIRE_START_DATE']).dt.month == date.month) &
                                                                 ((actual_fires_df['FIRE_START_DATE']).dt.day == date.day)]
